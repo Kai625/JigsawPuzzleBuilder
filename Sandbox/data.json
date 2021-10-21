@@ -1,0 +1,10 @@
+{
+  "TETING": true,
+  "FULLDISPLAY": true,
+  "MINIMUMDISPLAY": true,
+  "PIECEDISPLAY": true,
+  "METHOD": [
+    0,
+    1
+  ]
+}
