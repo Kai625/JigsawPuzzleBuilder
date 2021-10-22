@@ -8,8 +8,10 @@ The following file extract the pieces from the frame and
 create Piece objects for each piece.
 """
 import cv2
+import numpy as np
 
 from PuzzleSolving.basic_image_handler import get_image_block, saveResult
+from PuzzleSolving.piece import Piece
 
 
 def piece_extraction(maskedImage, originalGrayImage, binaryImage, configObj):
@@ -61,20 +63,21 @@ def piece_extraction(maskedImage, originalGrayImage, binaryImage, configObj):
         addFiles.append("Extracted_Piece_%d.png" % ID)
 
         # Initialise piece object.
-        # pieces.append(
-        #     Piece(pieceRGBImageBlock, pieceGrayImageBlock, ID, np.array([x - configObj.PIECE_MARGIN, y - configObj.PIECE_MARGIN]), configObj))
-        #
-        # # Get and place centroid on the frame.
-        # centroid = tuple(pieces[ID].get_pickup().tolist())
-        # cv2.circle(matrix, centroid, 10, [0, 0, 255], -1)
-        #
-        # # Label piece and add the corners
-        # cv2.putText(matrix, str(ID), centroid, cv2.FONT_HERSHEY_COMPLEX, 1.5, (255, 255, 255))
-        # for corner in pieces[ID].get_real_corners():
-        #     cv2.circle(matrix, tuple(corner.tolist()), 10, [255, 0, 0], -1)
+        pieces.append(
+            Piece(pieceRGBImageBlock, pieceGrayImageBlock, ID,
+                  np.array([x - configObj.PIECE_MARGIN, y - configObj.PIECE_MARGIN]), configObj))
+
+        # Get and place centroid on the frame.
+        centroid = tuple(pieces[ID].get_pickup().tolist())
+        cv2.circle(matrix, centroid, 10, [0, 0, 255], -1)
+
+        # Label piece and add the corners
+        cv2.putText(matrix, str(ID), centroid, cv2.FONT_HERSHEY_COMPLEX, 1.5, (255, 255, 255))
+        for corner in pieces[ID].get_real_corners():
+            cv2.circle(matrix, tuple(corner.tolist()), 10, [255, 0, 0], -1)
 
         ID += 1
 
     configObj.stages.append(str(3) + " Piece extraction")
     configObj.stageFiles.append(addFiles)
-    # return matrix, pieces
+    return matrix, pieces

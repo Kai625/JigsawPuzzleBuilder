@@ -8,7 +8,7 @@ class Test_window:
         self.testLayout = self.setup_test_layout()
 
     def setup_test_layout(self):
-        testLayout = [[sg.Text("Current stage: ", size=(int(675 / 12), 1), font="Comic 12 bold")],
+        testLayout = [[sg.Text("Current stage: ", size=(int(675 / 12), 1), font="Comic 12 bold", key="TEXT-CURRENT")],
                       [sg.Text("List of stages:", size=(int(675 / 8), 1), font="Comic 8 bold")],
                       [sg.Listbox(values=[], size=(int(675 / 16), 15), key="LIST-STAGES",
                                   enable_events=True, select_mode="SELECT_MODE_SINGLE")],

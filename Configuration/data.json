@@ -1,15 +1,15 @@
 {
-  "FULLDISPLAY": true,
-  "MINIMUMDISPLAY": true,
-  "PIECEDISPLAY": true,
-  "METHOD": [
-    0,
-    1
-  ],
-  "PIECEMARGIN": 5,
-  "MASK": 130,
-  "AREA": 500,
-  "CORNERANGLE": 0.6,
-  "RGBIMAGE": "BIRDTEST.png",
-  "GRAYIMAGE": "BIRDTEST_GRAY.png"
+    "FULLDISPLAY": true,
+    "MINIMUMDISPLAY": true,
+    "PIECEDISPLAY": true,
+    "METHOD": [
+        0,
+        1
+    ],
+    "MASK": 140,
+    "AREA": 500,
+    "PIECEMARGIN": 5,
+    "CORNERANGLE": 0.3,
+    "RGBIMAGE": "BIRDTEST.png",
+    "GRAYIMAGE": "BIRDTEST_GRAY.png"
 }

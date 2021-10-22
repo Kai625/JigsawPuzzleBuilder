@@ -1,3 +1,5 @@
+import os
+
 import PySimpleGUI as sg
 
 from GUI.config_window import Config_window
@@ -50,6 +52,24 @@ class Window_handler:
                 self.mainMenuWindow.Hide()
                 self.showTestWindow()
 
+    def addStageFiles(self):
+        if os.path.exists(self.constant_parameters.resultBasePath):
+            files = os.listdir(self.constant_parameters.resultBasePath)
+            newFilesAdded = list(filter(lambda x: "Position" in x, files))
+            self.constant_parameters.stageFiles.append(newFilesAdded)
+            newFilesAdded = list(filter(lambda x: "Both_Edge" in x, files))
+            self.constant_parameters.stageFiles.append(newFilesAdded)
+            newFilesAdded = list(filter(lambda x: "Peaks" in x, files))
+            self.constant_parameters.stageFiles.append(newFilesAdded)
+            newFilesAdded = list(filter(lambda x: "Corners" in x, files))
+            self.constant_parameters.stageFiles.append(newFilesAdded)
+            newFilesAdded = list(filter(lambda x: "Divided" in x, files))
+            self.constant_parameters.stageFiles.append(newFilesAdded)
+            newFilesAdded = list(filter(lambda x: "Example" in x, files))
+            self.constant_parameters.stageFiles.append(newFilesAdded)
+            newFilesAdded = list(filter(lambda x: "Characterised" in x, files))
+            self.constant_parameters.stageFiles.append(newFilesAdded)
+
     def showTestWindow(self):
         self.mainMenuWindow.close()
         counter = 1
@@ -80,9 +100,20 @@ class Window_handler:
                     self.constant_parameters.stages.append(str(counter) + " Apply mask")
                     testWindow["LIST-STAGES"].update(self.constant_parameters.stages)
                 if counter == 3:
-                    piece_extraction(self.maskedImage, self.grayImage, self.binaryMatrix,
-                                     self.constant_parameters)
+                    puzzleCharacterised, pieces = piece_extraction(self.maskedImage, self.grayImage, self.binaryMatrix,
+                                                                   self.constant_parameters)
+                    saveResult("Characterised_Pieces.png", puzzleCharacterised)
+                    self.constant_parameters.stages.append(str(4) + " Piece centroid and pickup location")
+                    self.constant_parameters.stages.append(str(5) + " Piece edges")
+                    self.constant_parameters.stages.append(str(6) + " Corner peaks")
+                    self.constant_parameters.stages.append(str(7) + " Piece corners")
+                    self.constant_parameters.stages.append(str(8) + " Divided edges")
+                    self.constant_parameters.stages.append(str(9) + " Example edge matrix")
+                    self.constant_parameters.stages.append(str(10) + " Fully divined frame")
                     testWindow["LIST-STAGES"].update(self.constant_parameters.stages)
+                    self.addStageFiles()
+                    counter = 10
+
                 counter += 1
 
             elif testEvent == "LIST-FILES" and len(testWindow["LIST-FILES"].get()) != 0:
@@ -92,3 +123,5 @@ class Window_handler:
             elif testEvent == "LIST-STAGES" and len(testWindow["LIST-STAGES"].get()) != 0:
                 stageIndex = self.constant_parameters.stages.index(testWindow["LIST-STAGES"].get()[0])
                 testWindow["LIST-FILES"].update(self.constant_parameters.stageFiles[stageIndex])
+                testWindow["TEXT-CURRENT"].update(
+                    "Current stage: " + testWindow["LIST-STAGES"].get()[0][2:])

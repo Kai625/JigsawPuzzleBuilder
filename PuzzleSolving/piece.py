@@ -8,14 +8,16 @@ The following file holds the Piece object and is responsible for gathering
 and storing all the piece characteristics.
 """
 import itertools
+import math
+import os
 
 import cv2
+import matplotlib.pyplot as plt
 import numpy as np
-from matplotlib import pyplot as plt
 from scipy.signal import correlate
 from scipy.signal import find_peaks
 
-from PuzzleSolving.basic_image_handler import show_save, isolate_Piece, createChain, distance_from_line, \
+from PuzzleSolving.basic_image_handler import isolate_Piece, createChain, distance_from_line, \
     compare_piece_edges, saveResult
 
 
@@ -32,8 +34,6 @@ class Piece(object):
         self._pieceName = "Piece %d" % ID
         self._relativePosition = relativePosition
 
-        self.configObj = configObj
-
         # Isolate the piece by removing any small object around the piece.
         self._originalRGBPiece, self._originalGrayPiece = isolate_Piece(self._originalGrayPiece, self._originalRGBPiece)
         # Make a copy for displaying only.
@@ -45,13 +45,12 @@ class Piece(object):
         self._pickupLocation = self._find_pickup_location()
 
         saveResult("Position_Points_Piece_%d.png" % ID, self._pieceDisplay)
-        addFiles.append("Position_Points_Piece_%d.png" % ID)
 
         # Find the edge of the entire piece and extract the matrix of points.
         self._erodedEdgeMatrix, self._realEdgeMatrix = self._find_edges()
 
         # Find the corners of the piece.
-        self._corners, self._cornerAngles = self._find_corners()
+        self._corners, self._cornerAngles = self._find_corners(configObj)
 
         # Get the separate edges using the corners and edge matrix.
         # The colour edge must use the eroded image since it will ensure all the background is gone.
@@ -167,15 +166,14 @@ class Piece(object):
         realEdgeMatrix = np.array(list(zip(realEdgePositions[1], realEdgePositions[0])))
 
         # Display both edges.
-        if DISPLAY:
-            copyDisplay = self._pieceDisplay.copy()
-            copyDisplay[erodedEdgePositions] = [0, 255, 255]
-            copyDisplay[realEdgePositions] = [255, 255, 0]
-            show_save("Both_Edge_%d" % self._ID, copyDisplay)
+        copyDisplay = self._pieceDisplay.copy()
+        copyDisplay[erodedEdgePositions] = [0, 255, 255]
+        copyDisplay[realEdgePositions] = [255, 255, 0]
+        saveResult("Both_Edges_%d.png" % self._ID, copyDisplay)
 
         return erodedEdgeMatrix, realEdgeMatrix
 
-    def _find_corners(self):
+    def _find_corners(self, constantObj):
         """
         The following method is used to find the corners of the pieces by making use of angles,
         and distance peaks from the center.
@@ -203,13 +201,17 @@ class Piece(object):
         angles[length:] += 2 * np.pi
 
         # Get the local peak distance from the centroid.
-        peaks, _ = find_peaks(distances, prominence=(20), threshold=(0, 5), width=(20), distance=(200))
+        peaks, _ = find_peaks(distances, prominence=(5), threshold=(0, 5), width=(20), distance=(10))
 
-        if DISPLAY2:
-            plt.plot(angles, distances)
-            plt.plot(angles[peaks], distances[peaks], "x")
-            plt.plot(angles, distances)
-            plt.show()
+        plt.figure(figsize=(5.5, 4))
+        plt.plot(angles, distances)
+        plt.plot(angles[peaks], distances[peaks], "x")
+        plt.plot(angles, distances)
+        plt.ylabel("Distance(pixels)")
+        plt.xlabel("Radians(rad)")
+        plt.grid()
+        plt.savefig(os.path.abspath("Results" + "/" + "Peaks_%d.png" % self._ID))
+        plt.close()
 
         # Revert angles.
         angles[length:] -= 2 * np.pi
@@ -237,7 +239,7 @@ class Piece(object):
         # Sort pairs by the difference closeness to 90 degrees.
         bestPairs = sorted(pairs, key=lambda x: abs(x[2] - np.pi / 2))[:5]
         # The angel should be between 63 and 117 degrees
-        bestPairs = [x for x in bestPairs if abs(x[2] - np.pi / 2) < ((np.pi / 2) * CORNER_THRESH)]
+        bestPairs = [x for x in bestPairs if abs(x[2] - np.pi / 2) < ((np.pi / 2) * constantObj.CORNER_ANGLE_TRESHHOLD)]
         # Need to sort to ensure the first chain corner is top left.
         bestPairs = sorted(bestPairs, key=lambda x: x[0])
 
@@ -261,8 +263,7 @@ class Piece(object):
             cv2.circle(self._pieceDisplay, (x, y), 3, color=(255, 0, 0), thickness=-1)
             cv2.putText(self._pieceDisplay, str(index), (x, y), cv2.FONT_HERSHEY_COMPLEX, 0.7, (255, 255, 255))
 
-        if DISPLAY3:
-            show_save("Corners_Piece_%d" % self._ID, self._pieceDisplay)
+        saveResult("Corners_Piece_%d.png" % self._ID, self._pieceDisplay)
 
         # Get the angles of the corners, used to get separate the edges.
         corner_angles = []
@@ -311,8 +312,7 @@ class Piece(object):
                 x, y = tuple(edge)
                 cv2.circle(self._pieceDisplay, (x, y), 2, color=(50 * index + 50, 100, 50 * index + 50), thickness=-1)
 
-        if DISPLAY:
-            show_save("Divided_Edges_Piece_%d" % self._ID, self._pieceDisplay)
+        saveResult("Divided_Edges_Piece_%d.png" % self._ID, self._pieceDisplay)
 
         return divided_edges
 
@@ -361,8 +361,7 @@ class Piece(object):
             # Make the edge matrix a binary image. for future comparison.
             leftFill[leftFill > 1] = 1
 
-            if DISPLAY:
-                show_save("Edge_Matrix_Edge_%d" % indx, leftFill * 255)
+            saveResult("Example_Edge_Matrix_Edge_%d.png" % indx, leftFill * 255)
 
             indx += 1
             edgeMatrix.append(leftFill.astype(np.uint8))
@@ -451,9 +450,9 @@ class Piece(object):
             scoreTab = np.sum(XORTabs)
             scoreEdge = np.sum(XOREdge)
 
-            puzzle_edges.append(scoreEdge < frame.shape[0] * ZOOM)
+            puzzle_edges.append(scoreEdge < frame.shape[0] * 8)
             # The largest score indicates the type of edge.
-            if scoreEdge < frame.shape[0] * ZOOM:
+            if scoreEdge < frame.shape[0] * 8:
                 pieceEdgeArray.append(0)
             elif scoreSlot > scoreTab:
                 pieceEdgeArray.append(-1)
@@ -534,7 +533,7 @@ class Piece(object):
         return -score1mean
 
     def display_real_piece(self):
-        big_pic = np.zeros((PUZZLE_SIZE, PUZZLE_SIZE, 3)).astype(dtype=np.uint8)
+        big_pic = np.zeros((12, 12, 3)).astype(dtype=np.uint8)
         r_y, r_x = self._relativePosition
         general = self._originalRGBPiece.copy()
 
