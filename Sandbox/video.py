@@ -1,7 +1,8 @@
 import cv2
 
-cam = cv2.VideoCapture(0)
-
+cam = cv2.VideoCapture(1)
+cam.set(3, 3840)
+cam.set(4, 2160)
 cv2.namedWindow("test")
 
 img_counter = 0
@@ -11,6 +12,7 @@ while True:
     if not ret:
         print("failed to grab frame")
         break
+    print(len(frame))
     cv2.imshow("test", frame)
 
     k = cv2.waitKey(1)

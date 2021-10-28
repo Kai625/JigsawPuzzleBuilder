@@ -73,21 +73,35 @@ def create_mask(image, configObj):
     Input: Gray scale image.
     Output: Altered Gray scale image, binary image [0,1] of the mask.
     """
-    # All values above the SELECTED_THRESHOLD is pulled down to 0.
-    image[image >= configObj.MASK_TRESHOLD] = 0
-    # All values above the SELECTED_THRESHOLD is pushed up to 255.
-    image[image >= 1] = 255
-    kernel = np.ones((3, 3), np.uint8)
-    # Remove small noise dots outside piece. (May not need.)
-    # TODO: implement morphology FP.
-    image = cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
-    # Remove small noise dots inside piece. (May not need.)
-    image = cv2.morphologyEx(image, cv2.MORPH_CLOSE, kernel)
-    binaryImage = image.copy()
-    # Turn the mask into binary matrix.
-    binaryImage[binaryImage >= 1] = 1
+    # # All values above the SELECTED_THRESHOLD is pulled down to 0.
+    # image[image >= configObj.MASK_TRESHOLD] = 0
+    # # All values above the SELECTED_THRESHOLD is pushed up to 255.
+    # image[image >= 1] = 255
+    # kernel = np.ones((3, 3), np.uint8)
+    # # Remove small noise dots outside piece. (May not need.)
+    # # TODO: implement morphology FP.
+    # image = cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
+    # # Remove small noise dots inside piece. (May not need.)
+    # image = cv2.morphologyEx(image, cv2.MORPH_CLOSE, kernel)
+    # binaryImage = image.copy()
+    # # Turn the mask into binary matrix.
+    # binaryImage[binaryImage >= 1] = 1
+    #
+    # return image, binaryImage
 
-    return image, binaryImage
+    imgH = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+    background_lower = np.array([165, 75, 105],
+                                dtype="uint8")
+    background_upper = np.array([180, 255, 255],
+                                dtype="uint8")
+    # print(imgH)
+    mask_B = cv2.inRange(imgH, background_lower, background_upper)
+    mask_inv_B = cv2.bitwise_not(mask_B)
+    cv2.imshow("B", mask_inv_B)
+    cv2.waitKey(0)
+    binaryImage = mask_inv_B.copy()
+    binaryImage[binaryImage >= 1] = 1
+    return mask_inv_B, binaryImage
 
 
 def apply_mask_rgb(image, binaryMatrix):

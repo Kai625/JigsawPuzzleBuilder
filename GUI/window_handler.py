@@ -90,7 +90,7 @@ class Window_handler:
                     testWindow["LIST-STAGES"].update(self.constant_parameters.stages)
                 if counter == 2:
                     # Create the mask that removes the background and reduces the noise.
-                    self.grayImage, self.binaryMatrix = create_mask(self.grayImage, self.constant_parameters)
+                    self.grayImage, self.binaryMatrix = create_mask(self.RGBImage, self.constant_parameters)
 
                     # Use binary matrix to apply the mask to the RGB image.
                     self.maskedImage = apply_mask_rgb(self.RGBImage, self.binaryMatrix)
