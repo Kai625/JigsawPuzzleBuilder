@@ -1,0 +1,66 @@
+#include <Arduino.h>
+void getSourceDest(void);
+int myNumber;
+char inChar;
+char charArray[5];
+int sourceDest[6];
+uint8_t counter = 0;
+uint8_t counter2 = 0;
+String msg = "Please enter a number:";
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() 
+{
+  // <Command, base, elbow, effector, base, elbow, effector>
+  while (!Serial.available());
+  inChar = Serial.read();
+  if (inChar == 'S')
+  {
+    //Serial.print("SPLITING");
+    getSourceDest();
+  }
+  else if (inChar == 'H')
+  {
+    Serial.print("HOMEING");
+  }
+  else if (inChar == 'C')
+  {
+    Serial.print("CLEARING");
+  }
+  else if (inChar == 'P')
+  {
+    Serial.print("PLACING");
+  }
+}
+
+void getSourceDest()
+{
+  while (Serial.available() < 37)
+  {
+  }
+  while (Serial.available() > 0)
+  {
+    inChar = Serial.read();
+    if (inChar == ':')
+      {
+        //Serial.print("Start reading values");
+        counter = 0;
+        counter2 = 0;
+      }
+    else if (inChar == ',' || inChar == '!')
+    {
+      //Serial.print("New value");
+      sourceDest[counter] = atoi(charArray);
+      Serial.println(sourceDest[counter]);
+      counter +=1;
+      counter2 = 0;
+    }
+    else
+    {
+      charArray[counter2] = inChar;
+      counter2 +=1; 
+    }  
+  }
+}
