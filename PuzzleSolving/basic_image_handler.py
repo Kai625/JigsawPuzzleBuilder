@@ -19,7 +19,7 @@ def saveResult(saveName, img):
         Input: N/A
         Output: RGB and GRAY scale images of the puzzle pieces.
     """
-    percentage = 500 / img.shape[1]
+    percentage = 500 / img.shape[0]
     width = int(img.shape[1] * percentage)
     height = int(img.shape[0] * percentage)
 
@@ -46,14 +46,14 @@ def get_test_images(configObj):
         return rgbImage, grayImage
 
 
-def shiftPerspective(RGBImage, GrayImage):
-    width, height = 315, 736
-    pts1 = np.float32([[256, 4], [679, 5], [249, 1009], [679, 1006]])
-    pts2 = np.float32([[0, 0], [width, 0], [0, height], [width, height]])
-    matrix = cv2.getPerspectiveTransform(pts1, pts2)
-    RGBImage = cv2.warpPerspective(RGBImage, matrix, (width, height))
-    GrayImage = cv2.warpPerspective(GrayImage, matrix, (width, height))
-    return RGBImage, GrayImage
+# def shiftPerspective(RGBImage, GrayImage):
+#     width, height = 315, 736
+#     pts1 = np.float32([[256, 4], [679, 5], [249, 1009], [679, 1006]])
+#     pts2 = np.float32([[0, 0], [width, 0], [0, height], [width, height]])
+#     matrix = cv2.getPerspectiveTransform(pts1, pts2)
+#     RGBImage = cv2.warpPerspective(RGBImage, matrix, (width, height))
+#     GrayImage = cv2.warpPerspective(GrayImage, matrix, (width, height))
+#     return RGBImage, GrayImage
 
 
 def show_save(name, img, fx=1, fy=1):
@@ -90,13 +90,20 @@ def create_mask(image, configObj):
     # return image, binaryImage
 
     imgH = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
-    background_lower = np.array([165, 75, 105],
+    background_lower = np.array([165, 75, 140],
                                 dtype="uint8")
     background_upper = np.array([180, 255, 255],
                                 dtype="uint8")
     # print(imgH)
     mask_B = cv2.inRange(imgH, background_lower, background_upper)
     mask_inv_B = cv2.bitwise_not(mask_B)
+    kernel = np.ones((3, 3), np.uint8)
+    # Remove small noise dots outside piece. (May not need.)
+    # TODO: implement morphology FP.
+    mask_inv_B = cv2.morphologyEx(mask_inv_B, cv2.MORPH_OPEN, kernel)
+    # Remove small noise dots inside piece. (May not need.)
+    mask_inv_B = cv2.morphologyEx(mask_inv_B, cv2.MORPH_CLOSE, kernel)
+
     cv2.imshow("B", mask_inv_B)
     cv2.waitKey(0)
     binaryImage = mask_inv_B.copy()

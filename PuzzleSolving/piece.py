@@ -38,7 +38,6 @@ class Piece(object):
         self._originalRGBPiece, self._originalGrayPiece = isolate_Piece(self._originalGrayPiece, self._originalRGBPiece)
         # Make a copy for displaying only.
         self._pieceDisplay = originalRGBPiece.copy()
-
         # Position attributes
         self._theta = 0
         self._centroid = self._find_centroid()
@@ -147,7 +146,7 @@ class Piece(object):
         # Erode the image slightly to ensure the image within the edge is clear
         # used manly for the colour section.
         # TODO : Erode and Canny
-        kernel = np.ones((3, 3), np.uint8)
+        kernel = np.ones((4, 4), np.uint8)
         eroded = cv2.erode(self._originalGrayPiece, kernel)
         # Get the edge using canny. So the canny edge is the pixel edge
         # of the piece.

@@ -6,6 +6,7 @@ from GUI.config_window import Config_window
 from GUI.test_window import Test_window
 from PuzzleSolving.basic_image_handler import get_test_images, create_mask, apply_mask_rgb, saveResult
 from PuzzleSolving.piece_builder import piece_extraction
+from PuzzleSolving.puzzle import Puzzle
 from constant_parameters import Constants
 
 
@@ -113,7 +114,9 @@ class Window_handler:
                     testWindow["LIST-STAGES"].update(self.constant_parameters.stages)
                     self.addStageFiles()
                     counter = 10
-
+                if counter == 11:
+                    puzzle = Puzzle(pieces, self.constant_parameters)
+                    puzzle.init_puzzle_builder()
                 counter += 1
 
             elif testEvent == "LIST-FILES" and len(testWindow["LIST-FILES"].get()) != 0:

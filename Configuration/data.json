@@ -7,9 +7,9 @@
         1
     ],
     "MASK": 140,
-    "AREA": 500,
+    "AREA": 20000,
     "PIECEMARGIN": 5,
     "CORNERANGLE": 0.3,
-    "RGBIMAGE": "unnamed2.jpg",
+    "RGBIMAGE": "PP.png",
     "GRAYIMAGE": "BIRDTEST_GRAY.png"
 }
