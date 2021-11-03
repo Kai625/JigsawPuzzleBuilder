@@ -5,97 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/JigsawPuzzleBuilder.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JigsawPuzzleBuilder.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Configuration/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/window_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/window_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PuzzleSolving/basic_image_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/PuzzleSolving/basic_image_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PuzzleSolving/piece.py" beforeDir="false" afterPath="$PROJECT_DIR$/PuzzleSolving/piece.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Both_Edges_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Both_Edges_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Both_Edges_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Both_Edges_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Both_Edges_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Both_Edges_10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Both_Edges_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Both_Edges_11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Both_Edges_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Both_Edges_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Both_Edges_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Both_Edges_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Both_Edges_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Both_Edges_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Both_Edges_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Both_Edges_5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Both_Edges_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Both_Edges_6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Both_Edges_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Both_Edges_7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Both_Edges_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Both_Edges_8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Both_Edges_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Both_Edges_9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Characterised_Pieces.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Characterised_Pieces.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Contoured_Image.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Contoured_Image.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Corners_Piece_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Corners_Piece_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Corners_Piece_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Corners_Piece_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Corners_Piece_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Corners_Piece_10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Corners_Piece_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Corners_Piece_11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Corners_Piece_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Corners_Piece_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Corners_Piece_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Corners_Piece_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Corners_Piece_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Corners_Piece_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Corners_Piece_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Corners_Piece_5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Corners_Piece_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Corners_Piece_6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Corners_Piece_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Corners_Piece_7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Corners_Piece_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Corners_Piece_8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Corners_Piece_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Corners_Piece_9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Divided_Edges_Piece_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Divided_Edges_Piece_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Divided_Edges_Piece_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Divided_Edges_Piece_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Divided_Edges_Piece_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Divided_Edges_Piece_10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Divided_Edges_Piece_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Divided_Edges_Piece_11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Divided_Edges_Piece_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Divided_Edges_Piece_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Divided_Edges_Piece_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Divided_Edges_Piece_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Divided_Edges_Piece_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Divided_Edges_Piece_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Divided_Edges_Piece_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Divided_Edges_Piece_5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Divided_Edges_Piece_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Divided_Edges_Piece_6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Divided_Edges_Piece_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Divided_Edges_Piece_7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Divided_Edges_Piece_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Divided_Edges_Piece_8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Divided_Edges_Piece_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Divided_Edges_Piece_9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Example_Edge_Matrix_Edge_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Example_Edge_Matrix_Edge_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Example_Edge_Matrix_Edge_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Example_Edge_Matrix_Edge_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Example_Edge_Matrix_Edge_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Example_Edge_Matrix_Edge_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Example_Edge_Matrix_Edge_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Example_Edge_Matrix_Edge_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Extracted_Piece_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Extracted_Piece_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Extracted_Piece_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Extracted_Piece_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Extracted_Piece_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Extracted_Piece_10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Extracted_Piece_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Extracted_Piece_11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Extracted_Piece_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Extracted_Piece_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Extracted_Piece_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Extracted_Piece_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Extracted_Piece_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Extracted_Piece_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Extracted_Piece_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Extracted_Piece_5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Extracted_Piece_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Extracted_Piece_6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Extracted_Piece_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Extracted_Piece_7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Extracted_Piece_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Extracted_Piece_8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Extracted_Piece_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Extracted_Piece_9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Mask.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Mask.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/MaskedRGBImage.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/MaskedRGBImage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Peaks_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Peaks_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Peaks_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Peaks_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Peaks_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Peaks_10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Peaks_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Peaks_11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Peaks_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Peaks_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Peaks_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Peaks_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Peaks_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Peaks_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Peaks_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Peaks_5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Peaks_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Peaks_6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Peaks_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Peaks_7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Peaks_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Peaks_8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Peaks_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Peaks_9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Position_Points_Piece_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Position_Points_Piece_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Position_Points_Piece_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Position_Points_Piece_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Position_Points_Piece_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Position_Points_Piece_10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Position_Points_Piece_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Position_Points_Piece_11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Position_Points_Piece_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Position_Points_Piece_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Position_Points_Piece_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Position_Points_Piece_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Position_Points_Piece_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Position_Points_Piece_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Position_Points_Piece_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Position_Points_Piece_5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Position_Points_Piece_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Position_Points_Piece_6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Position_Points_Piece_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Position_Points_Piece_7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Position_Points_Piece_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Position_Points_Piece_8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/Position_Points_Piece_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/Position_Points_Piece_9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/RGBImage.png" beforeDir="false" afterPath="$PROJECT_DIR$/Results/RGBImage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sandbox/AA.png" beforeDir="false" afterPath="$PROJECT_DIR$/Sandbox/AA.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sandbox/PP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sandbox/armControl.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sandbox/armControl.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sandbox/masking.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sandbox/masking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sandbox/oo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Sandbox/oo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sandbox/opencv_frame_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Sandbox/opencv_frame_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sandbox/opencv_frame_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Sandbox/opencv_frame_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sandbox/video.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sandbox/video.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +52,7 @@
       <recent name="F:\Project_EPR410\JigsawPuzzleBuilder\Configuration" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.armControl">
     <configuration name="armControl" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="JigsawPuzzleBuilder" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -155,6 +67,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sandbox/armControl.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="checker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="JigsawPuzzleBuilder" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sandbox" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sandbox/checker.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -207,28 +141,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="serialTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="JigsawPuzzleBuilder" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sandbox" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="F:\Project_EPR410\JigsawPuzzleBuilder\Sandbox\serialTest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="video" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="JigsawPuzzleBuilder" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -253,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.masking" />
-        <item itemvalue="Python.video" />
-        <item itemvalue="Python.serialTest" />
         <item itemvalue="Python.armControl" />
+        <item itemvalue="Python.checker" />
+        <item itemvalue="Python.masking" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.video" />
       </list>
     </recent_temporary>
   </component>
@@ -280,6 +192,9 @@
       <workItem from="1635346759458" duration="12282000" />
       <workItem from="1635423940456" duration="2883000" />
       <workItem from="1635493691309" duration="10027000" />
+      <workItem from="1635763924286" duration="5190000" />
+      <workItem from="1635803244195" duration="323000" />
+      <workItem from="1635894872297" duration="6261000" />
     </task>
     <servers />
   </component>
@@ -301,17 +216,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Sandbox/armControl.py</url>
-          <line>24</line>
+          <line>30</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Sandbox/armControl.py</url>
-          <line>18</line>
+          <line>25</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Sandbox/masking.py</url>
-          <line>19</line>
+          <line>38</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -321,8 +236,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Sandbox/masking.py</url>
-          <line>63</line>
-          <option name="timeStamp" value="31" />
+          <line>16</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Sandbox/masking.py</url>
+          <line>86</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -335,13 +255,14 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JigsawPuzzleBuilder$main.coverage" NAME="main Coverage Results" MODIFIED="1635505025037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/JigsawPuzzleBuilder$main.coverage" NAME="main Coverage Results" MODIFIED="1635764377378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/JigsawPuzzleBuilder$jsonRW.coverage" NAME="jsonRW Coverage Results" MODIFIED="1634727163894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sandbox" />
     <SUITE FILE_PATH="coverage/JigsawPuzzleBuilder$serial.coverage" NAME="serialTest Coverage Results" MODIFIED="1635361788605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sandbox" />
+    <SUITE FILE_PATH="coverage/JigsawPuzzleBuilder$checker.coverage" NAME="checker Coverage Results" MODIFIED="1635900414855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sandbox" />
     <SUITE FILE_PATH="coverage/JigsawPuzzleBuilder$window_handler.coverage" NAME="window_handler Coverage Results" MODIFIED="1634730322794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
     <SUITE FILE_PATH="coverage/JigsawPuzzleBuilder$separate.coverage" NAME="separate Coverage Results" MODIFIED="1635280231521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sandbox" />
     <SUITE FILE_PATH="coverage/JigsawPuzzleBuilder$video.coverage" NAME="video Coverage Results" MODIFIED="1635504888960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sandbox" />
-    <SUITE FILE_PATH="coverage/JigsawPuzzleBuilder$masking.coverage" NAME="masking Coverage Results" MODIFIED="1635504968161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sandbox" />
-    <SUITE FILE_PATH="coverage/JigsawPuzzleBuilder$armControl.coverage" NAME="armControl Coverage Results" MODIFIED="1635359198802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sandbox" />
+    <SUITE FILE_PATH="coverage/JigsawPuzzleBuilder$masking.coverage" NAME="masking Coverage Results" MODIFIED="1635768331347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sandbox" />
+    <SUITE FILE_PATH="coverage/JigsawPuzzleBuilder$armControl.coverage" NAME="armControl Coverage Results" MODIFIED="1635900589641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sandbox" />
   </component>
 </project>

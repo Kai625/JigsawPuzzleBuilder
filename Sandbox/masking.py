@@ -1,11 +1,27 @@
 import cv2
 import numpy as np
 
+
+def getPerscpective(pts1, pts2):
+    A = np.array([[pts1[0][0], pts1[0][1], 1, 0, 0, 0, -pts1[0][0] * pts2[0][0], -pts1[0][1] * pts2[0][0]],
+                  [pts1[1][0], pts1[1][1], 1, 0, 0, 0, -pts1[1][0] * pts2[1][0], -pts1[1][1] * pts2[1][0]],
+                  [pts1[2][0], pts1[2][1], 1, 0, 0, 0, -pts1[2][0] * pts2[2][0], -pts1[2][1] * pts2[2][0]],
+                  [pts1[3][0], pts1[3][1], 1, 0, 0, 0, -pts1[3][0] * pts2[3][0], -pts1[3][1] * pts2[3][0]],
+                  [0, 0, 0, pts1[0][0], pts1[0][1], 1, -pts1[0][0] * pts2[0][1], -pts1[0][1] * pts2[0][1]],
+                  [0, 0, 0, pts1[1][0], pts1[1][1], 1, -pts1[1][0] * pts2[1][1], -pts1[1][1] * pts2[1][1]],
+                  [0, 0, 0, pts1[2][0], pts1[2][1], 1, -pts1[2][0] * pts2[2][1], -pts1[2][1] * pts2[2][1]],
+                  [0, 0, 0, pts1[3][0], pts1[3][1], 1, -pts1[3][0] * pts2[3][1], -pts1[3][1] * pts2[3][1]]])
+    B = np.array([[pts2[0][0], pts2[1][0], pts2[2][0], pts2[3][0], pts2[0][1], pts2[1][1], pts2[2][1], pts2[3][1]]]).T
+    x = np.linalg.solve(A, B)
+    rotationMatrix = np.append(x, 1)
+    return rotationMatrix.reshape(3, 3)
+
+
 img = cv2.imread("opencv_frame_0.png")
 img2 = img.copy()
 c = 0
-while c <1:
-    c+=1
+while c < 1:
+    c += 1
     # a = input("Max sat: ")
     imgH = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     background_lower = np.array([165, 100, 165],
@@ -66,6 +82,11 @@ while c <1:
     width, height = 1200, 2600
     pts1 = np.float32([[cX1, cY1], [cX3, cY3], [cX2, cY2], [cX4, cY4]])
     pts2 = np.float32([[0, 0], [width, 0], [0, height], [width, height]])
-    matrix = cv2.getPerspectiveTransform(pts1, pts2)
+    matrix = getPerscpective(pts1, pts2)
+    # matrix = cv2.getPerspectiveTransform(pts1, pts2)
     img2 = cv2.warpPerspective(img2, matrix, (width, height))
     cv2.imwrite("PP.png", img2)
+    # a = np.array([[1, 2], [3, 4]])
+    # b = np.array([10, 22])
+    # x = np.linalg.solve(a, b)
+    # print(x)
