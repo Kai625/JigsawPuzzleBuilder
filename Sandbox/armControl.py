@@ -2,10 +2,10 @@ from math import acos, pow, atan, sin, pi, cos
 
 import matplotlib.pyplot as plt
 
-x = 325
-y = 101
-L1 = 258
-L2 = 151
+x = 283.5
+y = 119.5
+L1 = 258.5
+L2 = 152.0
 theta2 = acos((pow(x, 2) + pow(y, 2) - pow(L1, 2) - pow(L2, 2)) / (2 * L1 * L2))
 if x < 0 and y > 0:
     theta2 *= -1
@@ -27,7 +27,7 @@ y1 = L1 * sin(theta11 * pi / 180)
 x1 = L1 * cos(theta11 * pi / 180)
 print("L1: " + str(theta11))
 print("L2: " + str(theta2))
-plt.plot([-325, -325, 325, 325, -325], [101, 401, 401, 101, 101])
+plt.plot([-282, -282, 282, 282, -282], [95, 407.5, 407.5, 95, 95])
 plt.plot([0, x1, x], [0, y1, y], "r")
 plt.grid()
 plt.ylim(-600, 600)
